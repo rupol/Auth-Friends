@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Link, Route, withRouter } from "react-router-dom";
+import { NavLink, Route, withRouter } from "react-router-dom";
 
 import PrivateRoute from "./components/PrivateRoute";
 import { getToken } from "./utils/api";
@@ -15,12 +15,28 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FriendsList</h1>
       <nav>
-        {!loggedIn && <Link to="/login">Log In</Link>}
-        {loggedIn && <Link to="/friends">My Friends</Link>}
-        {loggedIn && <Link to="/addfriend">Add a Friend</Link>}
-        {loggedIn && <Link to="/logout">Log Out</Link>}
+        <p className="logo">FriendsList</p>
+        {!loggedIn && (
+          <NavLink exact to="/login">
+            Log In
+          </NavLink>
+        )}
+        {loggedIn && (
+          <NavLink exact to="/friends">
+            My Friends
+          </NavLink>
+        )}
+        {loggedIn && (
+          <NavLink exact to="/addfriend">
+            Add a Friend
+          </NavLink>
+        )}
+        {loggedIn && (
+          <NavLink exact to="/logout">
+            Log Out
+          </NavLink>
+        )}
       </nav>
 
       <Route exact path="/login" component={Login} />

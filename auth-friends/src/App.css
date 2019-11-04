@@ -143,22 +143,223 @@ html {
   text-align: center;
 }
 
+section,
+aside,
+footer {
+  margin : 0;
+  padding: 2rem;
+  color  : #000000;
+}
+
+main {
+  background-color: #fbfaef;
+}
+
 h1 {
-  font-size: 8rem;
-  margin   : 1rem 1% 2rem;
+  font-family   : 'Knewave', cursive;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+h3,
+h4,
+h5,
+p {
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 6.5rem;
+  margin   : 2rem 1%;
 }
 
 h2 {
-  font-size: 4rem;
-  margin   : 1rem 1% 2rem;
+  font-size     : 3.5rem;
+  font-weight   : 600;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-size     : 2.5rem;
+  margin        : 1rem;
 }
 
 h3 {
+  font-size: 2.2rem;
+  margin   : .5rem;
+}
+
+h4 {
   font-size: 2rem;
-  margin   : 1rem 1%;
+}
+
+h5 {
+  font-size : 1.75rem;
+  font-style: italic;
 }
 
 p {
-  font-size: 2rem;
-  margin   : 1rem 1%;
+  font-size  : 1.75rem;
+  line-height: 2.25rem;
+}
+
+a {
+  color: #000000;
+}
+
+nav {
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 80px;
+  z-index         : 5;
+  background-color: #f6c9f4;
+  display         : flex;
+  flex-flow       : row wrap;
+  justify-content : space-evenly;
+  align-items     : flex-end;
+}
+
+.logo {
+  text-decoration: none;
+  color          : #974ca7;
+  font-size      : 2.5rem;
+  font-family    : 'Knewave', cursive;
+  text-transform : uppercase;
+  padding        : 25px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color          : #000000;
+  font-size      : 1.75rem;
+  font-family    : 'Knewave', cursive;
+  text-transform : uppercase;
+  padding        : 25px 20px;
+}
+
+nav a:hover {
+  color: #06aed5;
+}
+
+nav a.active {
+  background-color: #fff;
+}
+
+.main-section {
+  margin-top: 120px;
+}
+
+form {
+  max-width       : 500px;
+  margin          : 0 auto;
+  padding         : 2rem;
+  border          : none;
+  background-color: #000;
+  border-radius   : 0.5rem;
+  box-shadow      : 8px 8px 0px #70ccbf;
+  display         : flex;
+  flex-wrap       : wrap;
+  align-items     : center;
+  justify-content : center;
+}
+
+input {
+  width           : 100%;
+  height          : 6rem;
+  border          : none;
+  border-radius   : 4px;
+  outline         : none;
+  padding         : 0 2rem;
+  font-size       : 2.5rem;
+  font-family     : "Open Sans", sans-serif;
+  font-weight     : 600;
+  text-transform  : uppercase;
+  letter-spacing  : .5rem;
+  color           : #000;
+  background-color: #f3cc40;
+  margin          : 1rem;
+
+}
+
+input::placeholder {
+  color: #000;
+}
+
+button {
+  height                 : 50px;
+  width                  : 70%;
+  text-align             : center;
+  -webkit-text-decoration: none;
+  text-decoration        : none;
+  border                 : none;
+  border-radius          : 4px;
+  color                  : #000;
+  background-color       : #06aed5;
+  font-family            : "Open Sans", sans-serif;
+  font-weight            : 600;
+  text-transform         : uppercase;
+  letter-spacing         : .5rem;
+  font-size              : 2.5rem;
+  margin                 : 2rem;
+}
+
+button:hover {
+  background-color: #91ebff;
+}
+
+.friend-card {
+  max-width       : 500px;
+  margin          : 3rem auto;
+  padding         : 2rem;
+  border          : none;
+  background-color: #000;
+  color           : #fff;
+  border-radius   : 0.5rem;
+  box-shadow      : 8px 8px 0px #70ccbf;
+}
+
+.friend-buttons {
+  display        : flex;
+  flex-wrap      : nowrap;
+  align-items    : center;
+  justify-content: center;
+}
+
+.friend-buttons button {
+  height                 : 50px;
+  width                  : 50px;
+  text-align             : center;
+  -webkit-text-decoration: none;
+  text-decoration        : none;
+  border                 : none;
+  border-radius          : 4px;
+  color                  : #000;
+  margin                 : 2rem;
+  padding                : 10px 14px;
+}
+
+.delete-button {
+  background-color: #e6673e;
+}
+
+.delete-button:hover {
+  background-color: #ee835f;
+}
+
+.edit-button {
+  background-color: #f3cc40;
+}
+
+.edit-button:hover {
+  background-color: #f1d365;
 }

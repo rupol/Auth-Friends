@@ -34,25 +34,29 @@ function Login(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {isLoading && <p>...logging in...</p>}
-      {error && <p>{error}</p>}
-      <input
-        type="text"
-        name="username"
-        placeholder="Username"
-        value={user.username}
-        onChange={handleChange}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={user.password}
-        onChange={handleChange}
-      />
-      <button type="submit">Log In</button>
-    </form>
+    <div className="main-section">
+      <h1>FriendsList</h1>
+      <h2>Log In</h2>
+      <form onSubmit={handleSubmit}>
+        {isLoading && <h2>...logging in...</h2>}
+        {error && <p>{error}</p>}
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={user.username}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={user.password}
+          onChange={handleChange}
+        />
+        <button type="submit">Log In</button>
+      </form>
+    </div>
   );
 }
 

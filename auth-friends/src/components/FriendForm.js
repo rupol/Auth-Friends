@@ -21,13 +21,16 @@ const FriendForm = props => {
       .post("/friends", newFriend)
       .then(res => {
         console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
       });
     props.history.push("/friends");
   };
 
   return (
-    <div>
-      <h2>Add a New Friend!</h2>
+    <div className="main-section">
+      <h1>Add a New Friend!</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="formName" hidden>
           Name:
