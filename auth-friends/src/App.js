@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import { Link, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
 
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
@@ -15,7 +16,7 @@ function App() {
       </nav>
 
       <Route exact path="/login" component={Login} />
-      <Route exact path="/friends" component={FriendsList} />
+      <PrivateRoute exact path="/friends" component={FriendsList} />
     </div>
   );
 }
