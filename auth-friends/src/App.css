@@ -230,12 +230,11 @@ nav {
 }
 
 .logo {
-  text-decoration: none;
-  color          : #974ca7;
-  font-size      : 2.5rem;
-  font-family    : 'Knewave', cursive;
-  text-transform : uppercase;
-  padding        : 25px 20px;
+  color         : #974ca7;
+  font-size     : 2.5rem;
+  font-family   : 'Knewave', cursive;
+  text-transform: uppercase;
+  padding       : 25px 20px;
 }
 
 nav a {
@@ -368,4 +367,42 @@ button:hover {
 
 .edit-button:hover {
   background-color: #f1d365;
+}
+
+.loader {
+  max-width: 100%;
+  margin   : 0 1% 6rem;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.8rem;
+    padding  : 22px 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color          : #000000;
+    font-size      : 1.25rem;
+    padding        : 25px 5px;
+  }
+
+  .friend-card,
+  form {
+    width: 90%;
+  }
+
+  form {
+    padding: 2rem 1.5rem;
+  }
+
+  input,
+  button {
+    font-size     : 1.5rem;
+    letter-spacing: .3rem;
+  }
+
+  input {
+    margin: 1rem 0;
+  }
 }

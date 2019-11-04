@@ -4,6 +4,8 @@ import api from "../utils/api";
 
 import Friend from "./Friend";
 
+import loader from "../img/loader.gif";
+
 function FriendsList(props) {
   const [friends, setFriends] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -62,7 +64,10 @@ function FriendsList(props) {
           to your FriendsList!
         </h2>
       ) : (
-        <h2>...loading friends...</h2>
+        <div>
+          <img src={loader} alt="" className="loader" />
+          <h2>...waiting for friends...</h2>
+        </div>
       )}
     </div>
   );
