@@ -8,6 +8,7 @@ function Login(props) {
     password: ""
   });
   const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = event => {
     setUser({
@@ -18,12 +19,13 @@ function Login(props) {
 
   const handleSubmit = event => {
     event.preventDefault();
-
+    setIsLoading(true);
     api()
       .post("/login", user)
       .then(res => {
         console.log(res.data);
         localStorage.setItem("token", res.data.payload);
+        setIsLoading(false);
         props.history.push("/friends");
       })
       .catch(err => {
@@ -33,6 +35,7 @@ function Login(props) {
 
   return (
     <form onSubmit={handleSubmit}>
+      {isLoading && <p>...logging in...</p>}
       {error && <p>{error}</p>}
       <input
         type="text"
