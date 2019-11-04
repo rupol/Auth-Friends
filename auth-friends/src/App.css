@@ -317,6 +317,12 @@ button:hover {
   background-color: #91ebff;
 }
 
+.error {
+  color    : #e6673e;
+  margin   : 4rem auto;
+  max-width: 630px;
+}
+
 .friend-card {
   max-width       : 500px;
   margin          : 3rem auto;
